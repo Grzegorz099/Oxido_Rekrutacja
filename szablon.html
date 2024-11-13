@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sztuczna inteligencja</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #000dff, #6b73ff, #ff6bd6);
+            background-size: 300% 300%;
+            animation: gradientAnimation 8s ease infinite;
+            z-index: -1;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+
+        .magic-button {
+            margin-top: 20%;
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #000;
+            font-size: 1.5em;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .magic-button:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 12px 30px rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 1);
+        }
+    </style>
+</head>
+<body>
+<button class="magic-button" onclick="goToPreview()">✨ Podgląd artykułu ✨</button>
+<script>
+    function goToPreview() {
+        window.location.href = "podglad.html";
+    }
+</script>
+</body>
+</html>
